@@ -1,0 +1,63 @@
+af-ascii-faces .thumbnail {
+  height: 200px;
+  overflow: hidden;
+}
+af-ascii-faces .thumbnail > div {
+  position: relative;
+  top: 30%;
+}
+
+.btn-group {
+	margin-bottom: 20px;
+}
+
+@keyframes spin {
+	to { transform: rotate(1turn); }
+}
+@-webkit-keyframes spin {
+	to { transform: rotate(1turn); }
+}
+
+.loading {
+	width: 5em;
+	height: 5em;
+	margin: 0 auto 20px auto;
+	font-size: 24px;
+	animation: spin 1s infinite steps(8);
+	-webkit-animation: spin 1s infinite steps(8);
+}
+
+.loading:before,
+.loading:after,
+.loading > div:before,
+.loading > div:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 2.25em;
+	width: .5em;
+	height: 1.5em;
+	border-radius: .2em;
+	background: #eee;
+	box-shadow: 0 3.5em #eee;
+	transform-origin: 50% 2.5em;
+}
+
+.loading:before {
+	background: #555;
+}
+
+.loading:after {
+	transform: rotate(-45deg);
+	background: #777;
+}
+
+.loading > div:before {
+	transform: rotate(-90deg);
+	background: #999;
+}
+
+.loading > div:after {
+	transform: rotate(-135deg);
+	background: #bbb;
+}

@@ -1,0 +1,21 @@
+<div ng-controller="productsCtrl as vm">
+  <div class="infinite-scroll container"
+    af-infinite-scroll
+    loading='vm.loading'
+    total-reached='vm.totalReached'
+    on-scroll-down='vm.getMoreFaces(false)'
+    fetch-idle-batch='vm.getMoreFaces(true)'>
+
+    <h5>Sort By</h5>
+    <div class="btn-group" role="group" aria-label="...">
+      <button ng-class="{'btn-primary': vm.orderBy==='price'}" ng-click="vm.setOrderBy('price')" class="btn btn-default">Price</button>
+      <button ng-class="{'btn-primary': vm.orderBy==='size'}" ng-click="vm.setOrderBy('size')" class="btn btn-default">Size</button>
+      <button ng-class="{'btn-primary': vm.orderBy==='id'}" ng-click="vm.setOrderBy('id')" class="btn btn-default">Id</button>
+    </div>
+
+    <af-ascii-faces face-list='vm.faceList'></af-ascii-faces>
+
+    <div ng-show='vm.loading' class="loading"><div></div></div>
+    <h2 class="text-center" ng-if='vm.totalReached'>~ end of catalogue ~</h2>
+  </div>
+</div>
