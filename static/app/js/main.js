@@ -4,7 +4,8 @@
   require.config({
     paths: {
       angular: ['../../../bower_components/angular/angular'],
-      jquery: ['../../../bower_components/jquery/dist/jquery']
+      jquery: ['../../../bower_components/jquery/dist/jquery'],
+      lodash: ['../../../bower_components/lodash/lodash']
     },
 
     waitSeconds: 30,
