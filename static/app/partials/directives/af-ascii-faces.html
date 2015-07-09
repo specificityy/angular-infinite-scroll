@@ -1,0 +1,21 @@
+<div class="row">
+  <div ng-repeat="item in vm.faceList">
+  
+    <div ng-if="vm.showAd($index)" class="col-xs-6 col-sm-4 col-md-4">
+      <div class="thumbnail">
+        <img class="ad" ng-src="/ad/?r={{::vm.getAdSrc($index)}}" alt="sponsor ad">
+      </div>
+    </div>
+
+    <div class="col-xs-6 col-sm-4 col-md-4">
+      <div class="thumbnail text-center">
+        <div>
+          <p class="face" style="font-size:{{::item.size}}px">{{::item.face}}</p>
+          <p>Id: {{::item.id}}</p>
+          <label class="price">{{::item.price/100 | currency : $}}</label>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+</div>
